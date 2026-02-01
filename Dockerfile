@@ -23,9 +23,6 @@ RUN npm install --production
 COPY server ./server
 COPY --from=builder /app/dist ./dist
 
-# Copy env file
-COPY .env ./
-
 ENV NODE_ENV=production
 
 EXPOSE 3001
